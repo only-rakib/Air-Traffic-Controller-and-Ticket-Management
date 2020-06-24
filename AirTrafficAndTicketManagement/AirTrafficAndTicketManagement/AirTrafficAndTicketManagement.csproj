@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{571030BC-7E48-40DC-9443-295DD1900F0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirTrafficAndTicketManagement</RootNamespace>
+    <AssemblyName>AirTrafficAndTicketManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ATC_and_TicketDataSet.cs">
+      <DependentUpon>ATC_and_TicketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ATC_and_TicketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATC_and_TicketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ATC_and_TicketDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATC_and_TicketDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="FileHandle.cs" />
+    <Compile Include="FlightControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightControl.Designer.cs">
+      <DependentUpon>FlightControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginBox.Designer.cs">
+      <DependentUpon>LoginBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlyStore.cs" />
+    <Compile Include="OptionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionMenu.Designer.cs">
+      <DependentUpon>OptionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTicket.Designer.cs">
+      <DependentUpon>PrintTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchFlight.Designer.cs">
+      <DependentUpon>SearchFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showPlaneforFinalList.cs" />
+    <Compile Include="TicketManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketManagement.Designer.cs">
+      <DependentUpon>TicketManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FlightControl.resx">
+      <DependentUpon>FlightControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginBox.resx">
+      <DependentUpon>LoginBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionMenu.resx">
+      <DependentUpon>OptionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTicket.resx">
+      <DependentUpon>PrintTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchFlight.resx">
+      <DependentUpon>SearchFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketManagement.resx">
+      <DependentUpon>TicketManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ATC_and_TicketDataSet.xsc">
+      <DependentUpon>ATC_and_TicketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ATC_and_TicketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATC_and_TicketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATC_and_TicketDataSet.xss">
+      <DependentUpon>ATC_and_TicketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ATC_and_TicketDataSet1.xsc">
+      <DependentUpon>ATC_and_TicketDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ATC_and_TicketDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATC_and_TicketDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATC_and_TicketDataSet1.xss">
+      <DependentUpon>ATC_and_TicketDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biman_Bangladesh_Airlines_-_Logo2.png" />
+    <None Include="Resources\back.jpg" />
+    <None Include="Resources\Biman_Bangladesh_Airlines_-_Logo1.png" />
+    <None Include="Resources\Biman_Bangladesh_Airlines_-_Logo.png" />
+    <None Include="Resources\Bangladesh-Biman %281%29.jpg" />
+    <None Include="Resources\giant_59410.jpg" />
+    <None Include="Resources\abstract_color_background_picture_8016-1280x800.jpg" />
+    <None Include="loginDisplay.png" />
+    <Content Include="option Background.jpg" />
+    <None Include="refresh.jpg" />
+    <None Include="Resources\sky-blue-background-hd-picture-1366x768.jpg" />
+    <None Include="ticket.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

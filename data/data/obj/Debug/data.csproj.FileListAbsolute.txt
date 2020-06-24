@@ -1,0 +1,6 @@
+F:\C#\Practice\airTrafic\data\data\bin\Debug\data.exe.config
+F:\C#\Practice\airTrafic\data\data\obj\Debug\data.csprojResolveAssemblyReference.cache
+F:\C#\Practice\airTrafic\data\data\bin\Debug\data.exe
+F:\C#\Practice\airTrafic\data\data\bin\Debug\data.pdb
+F:\C#\Practice\airTrafic\data\data\obj\Debug\data.exe
+F:\C#\Practice\airTrafic\data\data\obj\Debug\data.pdb
